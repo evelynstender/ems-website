@@ -2,75 +2,34 @@
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './app/**/*.{js,ts,jsx,tsx}',
-    './page/**/*.{js,ts,jsx,tsx}',
-    './ui/**/*.{js,ts,jsx,tsx}',
-  ],
+  content: ['./app/**/*.{js,ts,jsx,tsx}', './ui/**/*.{js,ts,jsx,tsx}'],
   future: {
     hoverOnlyWhenSupported: true,
   },
-  // theme: {
-  //   extend: {
-  //     colors: {
-  //       gray: colors.zinc,
-  //       'gray-1000': 'rgb(17,17,19)',
-  //       'gray-1100': 'rgb(10,10,11)',
-  //       vercel: {
-  //         pink: '#FF0080',
-  //         blue: '#0070F3',
-  //         cyan: '#50E3C2',
-  //         orange: '#F5A623',
-  //         violet: '#7928CA',
-  //       },
-  //     },
-  //     backgroundImage: ({ theme }) => ({
-  //       'vc-border-gradient': `radial-gradient(at left top, ${theme(
-  //         'colors.gray.500',
-  //       )}, 50px, ${theme('colors.gray.800')} 50%)`,
-  //     }),
-  //     keyframes: ({ theme }) => ({
-  //       rerender: {
-  //         '0%': {
-  //           ['border-color']: theme('colors.vercel.pink'),
-  //         },
-  //         '40%': {
-  //           ['border-color']: theme('colors.vercel.pink'),
-  //         },
-  //       },
-  //       highlight: {
-  //         '0%': {
-  //           background: theme('colors.vercel.pink'),
-  //           color: theme('colors.white'),
-  //         },
-  //         '40%': {
-  //           background: theme('colors.vercel.pink'),
-  //           color: theme('colors.white'),
-  //         },
-  //       },
-  //       shimmer: {
-  //         '100%': {
-  //           transform: 'translateX(100%)',
-  //         },
-  //       },
-  //       translateXReset: {
-  //         '100%': {
-  //           transform: 'translateX(0)',
-  //         },
-  //       },
-  //       fadeToTransparent: {
-  //         '0%': {
-  //           opacity: 1,
-  //         },
-  //         '40%': {
-  //           opacity: 1,
-  //         },
-  //         '100%': {
-  //           opacity: 0,
-  //         },
-  //       },
-  //     }),
-  //   },
-  // },
+  theme: {
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+    },
+    fontFamily: {
+      sans: ['Mouse Memoirs', 'Dosis', 'Carrois Gothic', 'sans-serif'],
+    },
+    colors: {
+      black85: '#030303',
+      black40: '#292929',
+      purple85: '#361F61',
+      purple40: '#A87FF3',
+    },
+    spacing: {
+      1: '8px',
+      2: '12px',
+      3: '16px',
+      4: '24px',
+      5: '32px',
+      6: '48px',
+    },
+  },
   plugins: [require('@tailwindcss/forms')],
 };
