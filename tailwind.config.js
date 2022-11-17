@@ -1,5 +1,3 @@
-// const colors = require('tailwindcss/colors');
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./app/**/*.{js,ts,jsx,tsx}', './ui/**/*.{js,ts,jsx,tsx}'],
@@ -17,10 +15,14 @@ module.exports = {
       sans: ['Mouse Memoirs', 'Dosis', 'Carrois Gothic', 'sans-serif'],
     },
     colors: {
-      black85: '#030303',
-      black40: '#292929',
-      purple85: '#361F61',
-      purple40: '#A87FF3',
+      transparent: 'transparent',
+      black: '#010101',
+      purple: '#0F0324',
+      green: '#057402',
+      red: '#300003',
+      yellow: '#231E00',
+      blue: '#00070C',
+      white: '#FFFFFF',
     },
     spacing: {
       1: '8px',
@@ -29,6 +31,24 @@ module.exports = {
       4: '24px',
       5: '32px',
       6: '48px',
+    },
+    extend: {
+      colors: {
+        black: {
+          100: '#818181',
+          500: '#0B0B0B',
+          1000: '#010101',
+        },
+        purple: {
+          100: '#E9DFFC',
+          500: '#925FF0',
+          1000: '#0F0324',
+        },
+        // green: {},
+        // red: {},
+        // yellow: {},
+        // blue: {},
+      },
     },
   },
   plugins: [require('@tailwindcss/forms')],
