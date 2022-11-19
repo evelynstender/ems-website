@@ -1,7 +1,7 @@
 import { Nunito } from '@next/font/google';
 import '@/styles/globals.css';
-import Header from '@/ui/Header';
-import Footer from '@/ui/Footer';
+import Header from '@/ui/components/Header';
+import Footer from '@/ui/components/Footer';
 
 const nunito = Nunito({
   weight: ['400', '700'],
