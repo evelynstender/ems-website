@@ -15,12 +15,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${nunito.className}  bg-stone-900 text-slate-50`}
+      className={`${nunito.className}  bg-stone-900 text-slate-50 `}
     >
       <head />
-      <body className="flex h-screen flex-col justify-between">
+      <body>
         <Header />
-        <div className="mb-auto">{children}</div>
+        <div className="grid h-screen grid-cols-3">{children}</div>
         <Footer />
       </body>
     </html>

@@ -21,11 +21,11 @@ const links = [
 
 const Header = () => {
   return (
-    <div className="mt-8 grid grid-cols-8">
-      <Link className="px-8" href="/">
+    <div className="grid grid-cols-3">
+      <Link className="m-8 place-self-start" href="/">
         Evelyn Stender
       </Link>
-      <div className="col-start-4">
+      <div className="place-self-center">
         {links.map((link, index) => {
           return (
             <Link key={index} className="px-4" href={link.href}>
@@ -34,7 +34,7 @@ const Header = () => {
           );
         })}
       </div>
-      <div className="col-end-9 px-10">colour theme</div>
+      <div className="m-8 place-self-center justify-self-end">theme</div>
     </div>
   );
 };
