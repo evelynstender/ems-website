@@ -1,8 +1,13 @@
-export default function Page() {
+import Hello from '@/ui/components/Hello';
+import Intro from '@/ui/components/Intro';
+
+const Page = () => {
   return (
-    <div className="grid grid-cols-3 place-content-center">
-      <span className="col-span-3">Hello 👋</span>
-      <span>I'm Evelyn, a software engineer based in London - UK</span>
+    <div className="col-span-3 grid place-content-center justify-items-center text-3xl">
+      <Hello />
+      <Intro />
     </div>
   );
-}
+};
+
+export default Page;

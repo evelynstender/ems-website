@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${nunito.className}  bg-stone-900 text-slate-50 `}
+      className={`${nunito.className}  bg-stone-900 text-lg text-slate-50`}
     >
       <head />
       <body>
