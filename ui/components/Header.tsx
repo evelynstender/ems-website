@@ -1,5 +1,7 @@
 'use client';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+
 import { usePathname } from 'next/navigation';
 import SkateboardIcon from './SkateboardIcon';
 
@@ -39,22 +41,30 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="flex flex-row place-self-center md:self-end">
+      <div
+        className={`flex flex-row place-self-center ${
+          pathName !== '/' ? 'md:self-end' : ''
+        }`}
+      >
         {links.map((link, index) => {
           return (
-            <div className="flex flex-col items-center">
-              <Link key={index} className="px-4" href={link.href}>
+            <div key={index} className="flex flex-col items-center">
+              <Link className="px-4" href={link.href}>
                 {link.label}
               </Link>
               {pathName === link.href ? (
-                <SkateboardIcon
-                  className="-ml-px -mt-3"
-                  width={50}
-                  height={50}
-                  // green-bright
-                  color="#5CC4C4"
-                />
-              ) : null}
+                <motion.div layoutId="skateboardIcon">
+                  <SkateboardIcon
+                    className="skateboardIcon -ml-px -mt-3"
+                    width={50}
+                    height={50}
+                    // green-bright
+                    color="#5CC4C4"
+                  />
+                </motion.div>
+              ) : (
+                <div></div>
+              )}
             </div>
           );
         })}

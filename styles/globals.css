@@ -7,3 +7,9 @@
     display: contents;
   }
 }
+
+@layer components {
+  .skateboardIcon {
+    display: absolute;
+  }
+}
