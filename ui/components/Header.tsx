@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import SkateboardIcon from './skateboardIcon';
+import SkateboardIcon from './SkateboardIcon';
 
 const links = [
   {
@@ -26,11 +26,20 @@ const Header = () => {
   const pathName = usePathname();
 
   return (
-    <div className="grid grid-cols-3">
-      <Link className="m-8 place-self-start" href="/">
-        Evelyn Stender
-      </Link>
-      <div className="flex flex-row place-self-center">
+    <div className="sm:align-center sm:flex sm:flex-col sm:flex-wrap sm:justify-center md:grid md:grid-cols-3">
+      <div className="flex flex-row self-center">
+        <Link
+          className="sm:m-4 sm:justify-self-center md:m-8 md:justify-self-start"
+          href="/"
+        >
+          Evelyn Stender
+        </Link>
+        <div className="sm:align-center sm:justify-center sm:self-center sm:justify-self-end md:hidden">
+          theme
+        </div>
+      </div>
+
+      <div className="flex flex-row place-self-center md:self-end">
         {links.map((link, index) => {
           return (
             <div className="flex flex-col items-center">
@@ -38,19 +47,21 @@ const Header = () => {
                 {link.label}
               </Link>
               {pathName === link.href ? (
-                <div className="text-green-bright">
-                  <SkateboardIcon
-                    className="-ml-px -mt-3 text-green-bright"
-                    width={50}
-                    height={50}
-                  />
-                </div>
+                <SkateboardIcon
+                  className="-ml-px -mt-3"
+                  width={50}
+                  height={50}
+                  // green-bright
+                  color="#5CC4C4"
+                />
               ) : null}
             </div>
           );
         })}
       </div>
-      <div className="m-8 place-self-center justify-self-end">theme</div>
+      <div className="place-self-center justify-self-end sm:hidden md:m-8 md:block">
+        theme
+      </div>
     </div>
   );
 };
