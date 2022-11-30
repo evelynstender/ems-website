@@ -11,7 +11,7 @@ const Intro = () => {
       transition={{ duration: 0.2, delay: 0.5 }}
       className="-mt-16"
     >
-      I'm Evelyn, a software engineer based in London - UK
+      I&apos;m Evelyn, a software engineer based in London - UK
     </motion.div>
   );
 };

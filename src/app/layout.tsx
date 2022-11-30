@@ -1,7 +1,7 @@
 import { Nunito } from '@next/font/google';
-import '@/styles/globals.css';
-import Header from '@/ui/components/Header';
-import Footer from '@/ui/components/Footer';
+import '@/src/styles/globals.css';
+import Header from '@/src/ui/components/Header';
+import Footer from '@/src/ui/components/Footer';
 
 const nunito = Nunito({
   weight: ['400', '700'],
@@ -20,7 +20,9 @@ export default function RootLayout({
       <head />
       <body>
         <Header />
-        <div className="grid h-screen grid-cols-3">{children}</div>
+        <div className="flex h-screen content-center justify-center">
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
